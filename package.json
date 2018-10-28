@@ -2,6 +2,7 @@
   "name": "mern",
   "version": "1.0.0",
   "description": "",
+  "homepage":"https://jkolze1.github.io/Recipe-Finder/",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -10,6 +11,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && yarn install",
     "build": "cd client && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "heroku-postbuild": "npm run build"
   },
   "author": "",
